@@ -1,0 +1,364 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Название всего проекта -->
+    <title>Как снимать на мобильный</title>
+    <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- контейнер, заключающий в себе содержимое веб-страницы; нужен, чтобы определять
+свойства страницы CSS-правилом с селектором класса, а не типа body -->
+<div class="page">
+
+    <!-- это меню, которое пока находится слева -->
+    <nav class="menu">
+
+        <!-- класс блока menu__item означает, что это контейнер с пунктом меню,
+        модификатор menu__item_theme_landscape указывает на тему этого пункта, пейзаж  -->
+        <div class="menu__item menu__item_theme_landscape">
+
+            <!-- cсылка на страницу сайта о пейзаже,  пока вместо адреса хэш # -->
+            <a href="#" class="menu__link menu__link_theme_landscape">Пейзаж</a>
+
+            <!-- изображение,  символизирующее тему пункта меню (пейзаж);
+            в будущем  возникнет рядом со ссылкой при наведении указателя мыши -->
+            <img src="https://pictures.s3.yandex.net/positioning/landscape_hover.jpg" alt="" class="menu__picture menu__picture_theme_landscape">
+        </div>
+        <!-- конец контейнера с пунктом меню; остальные 3 пункта устроены так же -->
+
+        <div class="menu__item menu__item_theme_portrait">
+            <a href="#" class="menu__link menu__link_theme_portrait">Портрет</a>
+            <img src="https://pictures.s3.yandex.net/positioning/portrait_hover.jpg" alt="" class="menu__picture menu__picture_theme_portrait">
+        </div>
+        <div class="menu__item menu__item_theme_viewpoint">
+            <a href="#" class="menu__link menu__link_theme_viewpoint">Ракурс</a>
+            <img src="https://pictures.s3.yandex.net/positioning/viewpoint_hover.jpg" alt="" class="menu__picture menu__picture_theme_viewpoint">
+        </div>
+        <div class="menu__item menu__item_theme_expression">
+            <a href="#" class="menu__link menu__link_theme_expression">Выразительность</a>
+            <img src="https://pictures.s3.yandex.net/positioning/expression_hover.jpg" alt="" class="menu__picture menu__picture_theme_expression">
+        </div>
+    </nav>
+
+    <!-- зона основного контента -->
+    <section class="content">
+
+        <!-- контейнер с текстом и иллюстрациями страницы,
+        нужен для управления их общими свойствами -->
+        <div class="content__container">
+
+            <!-- контейнер с введением -->
+            <div class="content__head">
+
+                <!-- заголовок страницы имеет первый уровень h1 -->
+                <!-- всем заголовкам присвоен класс "content__title", различаются они модификаторами;
+                модификатор _main-item указывает на заголовок всего текста страницы  -->
+                <h1 class="content__title content__title_item_main">Идея снимка</h1>
+
+                <!-- текст обычного абзаца, имеет класс "content__text" -->
+                <p class="content__text">
+                    Даже фото на смартфоне разглядывают очень внимательно, если в кадре есть загадка.
+                    Людям нравится делать открытия, особенно если для этого не нужны формулы, а достаточно
+                    просто внимательно посмотреть. Возьмите на себя управление взглядом зрителя, его расчётом
+                    и чувствами. И зритель будет благодарен, когда обнаружит разгадку.
+                </p>
+
+                <!-- цитата, снабжена особым классом "content__quote", чтобы можно было селектором
+                этого класса придать всем цитатам один формат -->
+                <p class="content__quote">
+                    «Зрение — это одно из быстрейших действий, какие только существуют…
+                    и тем не менее оно понимает сразу лишь один предмет».
+
+                    <!-- тег span обособляет область абзаца с указанием источника цитаты,
+                    этой области придан класс "content__quote-origin" -->
+                    <span class="content__quote-origin">Леонардо да Винчи, «Трактат о живописи».</span>
+                </p>
+            </div>
+            <!-- конец контейнера с введением -->
+
+            <!-- контейнер с первой главой -->
+            <div class="content__item">
+
+                <!-- названия глав, разделов — заголовки 2-го уровня h2,
+                всем им присвоен общий класс "content__title_item_sub" -->
+                <h2 class="content__title content__title_item_sub">Управление взглядом</h2>
+
+                <!-- названия подразделов — заголовки 3-го уровня h3;
+                им присвоен общий класс "content__title_item_method";
+                обратите внимание на синтаксис модификатора из двух слов item и method:
+                одинарное нижнее подчёркивание перед именем и перед значением модификатора _item_method -->
+                <h3 class="content__title content__title_item_method">Рамка</h3>
+                <p class="content__text">
+                    Рамка подразумевает, что главное — внутри неё, и туда надо посмотреть.
+                    Зритель послушно всматривается. Этот приём очень выручает, когда хочется
+                    сделать оригинальный снимок известного объекта. Эйфелева башня, сфотографированная
+                    из окна, смотрится гораздо интереснее. Роли рамок выполняют арки, ставни, дверцы, дыры.
+                    Если внутри что-то любопытное, рамку надо делать потоньше, а если просто голубое небо —
+                    потолще, чтобы мы оценили рамку.
+                </p>
+
+                <!-- контейнер с иллюстрацией; остальные устроены так же -->
+                <div class="content__image">
+
+                    <!-- иллюстрация в тексте; остальные устроены так же -->
+                    <img src="https://pictures.s3.yandex.net/positioning/frame.jpg" alt="" class="content__image-item">
+
+                    <!-- область "покрывала", которое будет ложиться поверх изображения
+                    при наведении указателя мыши на эту область -->
+                    <div class="content__image-cover">
+                        <!-- текст подписи к иллюстрации -->
+                        <p class="content__image-name">Ночная улыбка, Москва.</p>
+                    </div>
+                    <!-- конец области "покрывала" -->
+                </div>
+                <!-- конец контейнера с иллюстрацией -->
+
+                <h3 class="content__title content__title_item_method">Вуаль</h3>
+                <p class="content__text">
+                    Полупроницаемые для взгляда объекты на переднем плане играют ту же роль, что и рамка:
+                    побуждают всматриваться. Так привлекается внимание. Работает эффект тумана и дымки,
+                    только разница в том, что автор имеет возможность указать зрителю, какой именно объект
+                    надо разглядывать внимательнее: тот, который полуприкрыт. Ведь от нас обычно прячут самое
+                    важное. Лучше, если вуаль красива сама по себе. У какой девушки нет фотографии, сделанной
+                    сквозь локоны или букеты?
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/cover.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Волейбол в лесу, Серебряный Бор.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content__item">
+                <h2 class="content__title content__title_item_sub">Указание вектором</h2>
+                <p class="content__text">
+                    Вектор — направляющая для взгляда. Это может быть как линия, так и разница освещённости,
+                    цвета, резкости, побуждающая следить за перепадом и приводящая зрителя к важному объекту.
+                    Ещё лучше, если два разнородных вектора уравновешивают друг друга. Тогда зритель сначала
+                    пройдётся по первому от начала до конца, а затем вернётся назад по второму. Так он будет
+                    путешествовать по кадру, совершая открытия. Векторы привлекают внимание к точке, в которой
+                    сходятся, или из которой расходятся.</p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/vector1.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Блик, Москва.</p>
+                    </div>
+                </div>
+                <p class="content__text">
+                    Самый надёжный вектор — это взгляд героя в кадре: приём из живописи эпохи Возрождения.
+                    Встречающиеся взгляды — это целый рассказ об отношениях. Взгляды, сходящиеся в одну точку,
+                    указывают на самое главное. Зритель с энтузиазмом примется его искать и оценивать.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/vector.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Спортплощадка, Воткинск.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- конец контейнера с первой главой -->
+
+            <!-- контейнер со второй главой -->
+            <div class="content__item">
+                <h2 class="content__title content__title_item_sub">Управление расчётом</h2>
+                <p class="content__text">
+                    Как ни удивительно, человек постоянно считает в уме, отыскивая вокруг себя геометрические
+                    фигуры. И обнаружив неочевидную на первый взгляд фигуру, мысленно восклицает "Эврика"
+                    и ставит себе пятёрку. Для нас это неизменный источник положительных эмоций, которым
+                    нельзя пренебрегать.
+                </p>
+                <h3 class="content__title content__title_item_method">Треугольник</h3>
+                <p class="content__text">
+                    Магический треугольник, складывающийся из случайных предметов, бросается в глаза.
+                    Также наше воображение любит строить несуществующие треугольники, вписывая в них всё,
+                    что легко вписывается.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/triangle.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Зимний спорт, станция Весенняя.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Эффектные кривые</h3>
+                <p class="content__text">Графическое совершенство парабол и гипербол производит впечатление.</p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/parabola.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">После дождя, Поклонная гора.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Параллельные прямые</h3>
+                <p class="content__text">В природе так редки, что хочется узнать, чьих рук это дело.</p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/parallel.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Закат в метро, Москва.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Орнамент</h3>
+                <p class="content__text">
+                    Приятно вдруг обнаружить орнамент из похожих объектов, собранных вместе отнюдь
+                    не в декоративных целях.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/ornament.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Сентябрь, Москва.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Ритм</h3>
+                <p class="content__text">
+                    Уходящие вдаль одинаковые объекты позволяют прикинуть расстояние или высоту.
+                    Что зритель и сделает с удовольствием.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/rythm.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Геометрия пространства, Сочи.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Отражения</h3>
+                <p class="content__text">
+                    Всем нравится разгадывать, где в кадре оригинал, а где его отражение. Особенно интересной
+                    задача становится, когда отражений несколько.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/reflection.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Ориентир, Москва.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- конец контейнера со второй главой -->
+
+            <!-- контейнер с третьей главой -->
+            <div class="content__item">
+                <h2 class="content__title content__title_item_sub">Управление чувствами</h2>
+                <p class="content__text">
+                    Эмоциональный фон возникает бессознательно. Его не проверить, как геометрические расчёты
+                    и направления векторов. Но для вас он вполне материален, поскольку вы его ощущаете.
+                    Если содержание можно анализировать, то доминирущий цвет оказывает психологическое
+                    воздействие помимо вашей воли. Выбором цветов автор снимка создаёт определённое настроение.
+                </p>
+                <h3 class="content__title content__title_item_method">Красный</h3>
+                <p class="content__text">
+                    Цвет возбуждения и напряжения. Это самый насыщенный из цветов.
+                    Красный цвет несёт в себе идею энергии и одновременно опасности.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/red.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Рижский экспресс, Москва.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Жёлтый</h3>
+                <p class="content__text">
+                    Повышает настроение и аппетит. Всё жёлтое так и тянется к зрителю с улыбкой и словами "Жизнь прекрасна".
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/yellow.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Искажение стекла, Ижевск.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Зелёный</h3>
+                <p class="content__text">
+                    Цвет гармонии и роста. Ярко-зелёный подходит детям, играющим на природе: впечатление растущего
+                    в безопасном. И разрешающие сигналы недаром зелёного цвета.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/green.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Утренняя тренировка, Москва.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Синий</h3>
+                <p class="content__text">
+                    Цвет уверенности и доверия. Поскольку в противоположность жёлтому синий удаляется от зрителя,
+                    он рождает лёгкую грусть: "всё проходит".
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/blue.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Аэропорт, Ижевск.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Фиолетовый</h3>
+                <p class="content__text">
+                    Производит впечатление достоинства, величия (особенно с пурпурным оттенком),
+                    самодостаточности и способности к творчеству.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/violet.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Закатный порт, Новороссийск.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Белый</h3>
+                <p class="content__text">
+                    Значение белого отличается в разных культурах, но чаще это цвет добра, света
+                    и жизни, в том числе вечной жизни за гробом.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/white.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Зимняя река, Веретьево.</p>
+                    </div>
+                </div>
+                <h3 class="content__title content__title_item_method">Чёрный</h3>
+                <p class="content__text">
+                    В чёрный часто вкладывают идеи зла и смерти, но как цвет одежды и техники он скорее производит
+                    впечатление порядка, элегантности и таинственной силы.
+                </p>
+                <div class="content__image">
+                    <img src="https://pictures.s3.yandex.net/positioning/black.jpg" alt="" class="content__image-item">
+                    <div class="content__image-cover">
+                        <p class="content__image-name">Набережная, Москва.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- конец контейнера с третьей главой -->
+
+            <!-- контейнер с заключением -->
+            <div class="content__item">
+                <h2 class="content__title content__title_item_sub">Делитесь!</h2>
+                <p class="content__text">
+                    Мобильная фотография приносит двойное удовольствие — от хорошего снимка
+                    и от его обсуждения в соцсетях.
+                </p>
+
+                <!-- текст второй цитаты, имеет тот же класс, что и первая -->
+                <p class="content__quote">
+                    «Рисовать в обществе много лучше, чем одному: хорошая зависть побудит быть
+                    в числе более восхваляемых, чем ты, так как похвалы другим будут тебя пришпоривать».
+                    <span class="content__quote-origin">Леонардо да Винчи, «Трактат о живописи».</span>
+                </p>
+                <p class="content__text">
+                    Не упускайте возможность поделиться: по числу лайков и вопросов поймёте, в какую сторону
+                    развиваться. А когда наберётся достаточно много снимков, можно пересмотреть их и узнать
+                    кое-что новое о себе. Например, задаться вопросом: вот круг моих идей, отчего меня привлекают
+                    именно они? Как я отношусь к тому, что снимаю? Как меняется моё отношение со временем,
+                    и как меняюсь я? Быть может, вы увидите ответ.
+                </p>
+            </div>
+            <!-- конец контейнера с заключением -->
+
+            <!-- контейнер с информацией об авторах и авторских правах -->
+            <div class="content__item content__item_type_copyright">
+                <!-- текст строки с информацией об авторе -->
+                <p class="content__text content__text_type_copyright">Фото: Сергей Нугаев</p>
+                <p class="content__text content__text_type_copyright">Текст: Михаил Шифрин</p>
+                <!-- здесь знак копирайта передан спецсимволом, кодирующимся как &copy; -->
+                <p class="content__text content__text_type_copyright">© Яндекс.Практикум</p>
+            </div>
+            <!-- конец контейнера с информацией об авторах и авторских правах -->
+
+        </div>
+        <!-- конец контейнера с текстом и иллюстрациями -->
+    </section>
+    <!-- конец зоны основного контента -->
+</div>
+<!-- конец контейнера, заключающего в себе всё содержимое веб-страницы -->
+</body>
+</html>
